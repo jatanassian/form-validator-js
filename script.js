@@ -28,11 +28,17 @@ const validateEmail = (email) => {
 const checkRequired = (inputArr) => {
   inputArr.forEach((input) => {
     if (!input.value.trim()) {
-      showError(input, `${(input.id)} is required`);
+      showError(input, `${getFieldName(input)} is required`);
     } else {
       showSuccess(input);
     }
   });
+}
+
+// Get field name
+const getFieldName = (input) => {
+  // Get the id of the input and turns the first letter in uppercase
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // Event listeners
