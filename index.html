@@ -7,7 +7,31 @@
   <title>Form Validator</title>
 </head>
 <body>
-  
+  <div class="container">
+    <form id="form" class="form"></form>
+      <h2>Register</h2>
+      <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email"> <!-- We could use the type "email" but is has a validation on its own. In this project we want to do the validation for all the fields. -->
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password"> 
+        <small>Error message</small>
+      </div>
+      <div class="form-control">
+        <label for="password">Confirm Password</label>
+        <input type="text" id="password" placeholder="Enter password again">
+        <small>Error message</small>
+      </div>
+      <button>Submit</button>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
